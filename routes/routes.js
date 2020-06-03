@@ -7,7 +7,8 @@ router.get('/', (req, res) => {
 })
 
 router.use('/api/user', require('./user'))
-router.use('/api/eventRegistration', require('./eventRegistration'))
+router.use('/api/interested', require('./interested'))
+router.use('/api/createEvent', require('./createEvent'))
 
 
 module.exports = router

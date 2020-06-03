@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 
 const router = express.Router()
 
-const event = require('../models/eventRegistration')
+const event = require('../models/createEvent')
 const authToken = require('../middlewares/authToken')
 const authUser = require('../middlewares/authUser')
 
@@ -11,12 +11,12 @@ const authUser = require('../middlewares/authUser')
 router.post('/', authToken, async (req, res) => {
     // console.log(req.body)
     // res.json({ status: 200, message: 'Done' })
-    const { fullName, phoneNumber, email, registrationType, ticketCount } = req.body
+    const { eventName, venue, date, eventType, payment } = req.body
     try {
         await event.create({
-            userId: req.user._id, fullName, phoneNumber, email, registrationType, ticketCount
+            userId: req.user._id, eventName, date, venue, eventType, payment
         })
-        res.status(201).json({ status: 201, message: 'Event Registered Successfully!' })
+        res.status(201).json({ status: 201, message: 'Event created Successfully!' })
     } catch (err) {
         console.log(err)
         res.status(500).json({ status: 500, error: err })

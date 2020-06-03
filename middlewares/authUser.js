@@ -9,7 +9,7 @@ module.exports = async (req, res, next) => {
         req.user = JSON.parse(result.data)
 
     } catch (err) {
-        return res.status(401).json({ status: 401, message: 'User Unauthorised' })
+        return res.status(401).json({ status: 401, message: 'Admin Unauthorised' })
     }
     next()
 }

@@ -8,7 +8,7 @@ module.exports = async (req, res, next) => {
         const result = await jwt.verify(token, process.env.JWT_SECRET)
         req.user = JSON.parse(result.data)
     } catch (err) {
-        return res.status(401).send('User Unauthorised')
+        return res.status(401).send('Admin Unauthorised')
     }
     next()
 }

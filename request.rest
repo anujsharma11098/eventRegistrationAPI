@@ -20,19 +20,38 @@ Content-Type: application/json
 
 ### Get all Events
 
-GET http://localhost:5000/api/eventRegistration
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoie1wiX2lkXCI6XCI1ZWQwYjA4OGZlODczMTQzYWM4ZDBmZThcIixcImZ1bGxOYW1lXCI6XCJBbnVqIFNoYXJtYVwiLFwicGhvbmVOdW1iZXJcIjo3NzI2MDYyNTQwLFwiZW1haWxcIjpcImFudWpzaGFybWExMTA5OEBnbWFpbC5jb21cIixcInBhc3N3b3JkXCI6XCIkMmEkMTAkSDF6QXN0WXF3bVh3ZVNFWXk2bXZpdTM3MG0vU0gxU3p0VE0uOFA0RGtQRmRvVkVqaEg5MW1cIixcImNyZWF0ZWRBdFwiOlwiMjAyMC0wNS0yOVQwNjo0OTo0NC40NTdaXCIsXCJ1cGRhdGVkQXRcIjpcIjIwMjAtMDUtMjlUMDY6NDk6NDQuNDU3WlwiLFwiX192XCI6MH0iLCJpYXQiOjE1OTA3MzQ5ODV9.2k3H2n6qSTR8Cq5-FA_x7DVbTaHK-EJmCT_TRNOqFDg
+GET http://localhost:5000/api/createEvent
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoie1wiX2lkXCI6XCI1ZWQ2N2I1ODE5M2FlYjA1Y2MxZmU4ZTJcIixcImZ1bGxOYW1lXCI6XCJBbnVqIFNoYXJtYVwiLFwicGhvbmVOdW1iZXJcIjo3NzI2MDYyNTQwLFwiZW1haWxcIjpcImFudWpzaGFybWExMTA5OEBnbWFpbC5jb21cIixcInBhc3N3b3JkXCI6XCIkMmEkMTAkRFJUNEZtdkJJeUJleDc2RzZrdHZCdXJOWXc0R1hxclZPWHJQM1dLaC9MbEtDZjh1bnBhNjJcIixcImNyZWF0ZWRBdFwiOlwiMjAyMC0wNi0wMlQxNjoxNjoyNC4zOTFaXCIsXCJ1cGRhdGVkQXRcIjpcIjIwMjAtMDYtMDJUMTY6MTY6MjQuMzkxWlwiLFwiX192XCI6MH0iLCJpYXQiOjE1OTExMTQ1ODR9.xKbeWneGsT7LoginTSX2oCwPNAQHigo5w7sgpUDby_Q
 
 ### event registered
 
-POST http://localhost:5000/api/eventRegistration
+POST http://localhost:5000/api/createEvent
 Content-Type: application/json
 
 {
-    "authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoie1wiX2lkXCI6XCI1ZWQwYjA4OGZlODczMTQzYWM4ZDBmZThcIixcImZ1bGxOYW1lXCI6XCJBbnVqIFNoYXJtYVwiLFwicGhvbmVOdW1iZXJcIjo3NzI2MDYyNTQwLFwiZW1haWxcIjpcImFudWpzaGFybWExMTA5OEBnbWFpbC5jb21cIixcInBhc3N3b3JkXCI6XCIkMmEkMTAkSDF6QXN0WXF3bVh3ZVNFWXk2bXZpdTM3MG0vU0gxU3p0VE0uOFA0RGtQRmRvVkVqaEg5MW1cIixcImNyZWF0ZWRBdFwiOlwiMjAyMC0wNS0yOVQwNjo0OTo0NC40NTdaXCIsXCJ1cGRhdGVkQXRcIjpcIjIwMjAtMDUtMjlUMDY6NDk6NDQuNDU3WlwiLFwiX192XCI6MH0iLCJpYXQiOjE1OTA3MzQ5ODV9.2k3H2n6qSTR8Cq5-FA_x7DVbTaHK-EJmCT_TRNOqFDg",
-    "fullName" : "Anuj Sharma" ,
-    "email" : "anujsharma11098@gmail.com" ,
-    "phoneNumber" : "7726062540" ,
-    "registrationType" : "GROUP" ,
-    "ticketCount" : "100"
+    "authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoie1wiX2lkXCI6XCI1ZWQ2N2I1ODE5M2FlYjA1Y2MxZmU4ZTJcIixcImZ1bGxOYW1lXCI6XCJBbnVqIFNoYXJtYVwiLFwicGhvbmVOdW1iZXJcIjo3NzI2MDYyNTQwLFwiZW1haWxcIjpcImFudWpzaGFybWExMTA5OEBnbWFpbC5jb21cIixcInBhc3N3b3JkXCI6XCIkMmEkMTAkRFJUNEZtdkJJeUJleDc2RzZrdHZCdXJOWXc0R1hxclZPWHJQM1dLaC9MbEtDZjh1bnBhNjJcIixcImNyZWF0ZWRBdFwiOlwiMjAyMC0wNi0wMlQxNjoxNjoyNC4zOTFaXCIsXCJ1cGRhdGVkQXRcIjpcIjIwMjAtMDYtMDJUMTY6MTY6MjQuMzkxWlwiLFwiX192XCI6MH0iLCJpYXQiOjE1OTExMTQ1ODR9.xKbeWneGsT7LoginTSX2oCwPNAQHigo5w7sgpUDby_Q",
+    "eventName" : "GDG",
+    "venue":"pappu ka Ghar",
+    "date" : "2020-06-20",
+    "payment":"Free",
+    "eventType":"writing"
 }
+
+### interested
+
+POST http://localhost:5000/api/interested
+Content-Type: application/json
+
+{
+    "eventId":"5ed68095251aaf2ab8ff0dec",
+    "fullName":"Afzal",
+    "email":"afzalraza@gmail.com",
+    "registrationType":"SELF",
+    "phoneNumber":"9024653005",
+    "ticketCount":"1"
+}
+
+### get event Info by id
+
+GET http://localhost:5000/api/interested/5ed68095251aaf2ab8ff0dec
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoie1wiX2lkXCI6XCI1ZWQ2N2I1ODE5M2FlYjA1Y2MxZmU4ZTJcIixcImZ1bGxOYW1lXCI6XCJBbnVqIFNoYXJtYVwiLFwicGhvbmVOdW1iZXJcIjo3NzI2MDYyNTQwLFwiZW1haWxcIjpcImFudWpzaGFybWExMTA5OEBnbWFpbC5jb21cIixcInBhc3N3b3JkXCI6XCIkMmEkMTAkRFJUNEZtdkJJeUJleDc2RzZrdHZCdXJOWXc0R1hxclZPWHJQM1dLaC9MbEtDZjh1bnBhNjJcIixcImNyZWF0ZWRBdFwiOlwiMjAyMC0wNi0wMlQxNjoxNjoyNC4zOTFaXCIsXCJ1cGRhdGVkQXRcIjpcIjIwMjAtMDYtMDJUMTY6MTY6MjQuMzkxWlwiLFwiX192XCI6MH0iLCJpYXQiOjE1OTExMTQ1ODR9.xKbeWneGsT7LoginTSX2oCwPNAQHigo5w7sgpUDby_Q

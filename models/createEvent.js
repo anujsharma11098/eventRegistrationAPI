@@ -5,27 +5,28 @@ const EventSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         required: true
     },
-    fullName: {
+    eventName: {
         type: String,
         required: true
     },
-    email: {
+    venue: {
         type: String,
         required: true
     },
-    phoneNumber: {
-        type: Number,
-        required: true
-    },
-    registrationType: {
+    date: {
         type: String,
         required: true
     },
-    ticketCount: {
-        type: Number,
+    payment: {
+        type: String,
         required: true
     },
-    
+    eventType: {
+        type: String,
+        required: true
+    }
+
+
 }, {
     timestamps: true
 })
