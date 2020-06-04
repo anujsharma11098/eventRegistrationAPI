@@ -11,10 +11,10 @@ router.post('/', async (req, res) => {
     // res.json({ status: 200, message: 'Done' })
     const { eventId, fullName, email, registrationType, phoneNumber, ticketCount } = req.body
     try {
-        await interest.create({
+       let result= await interest.create({
             eventId, fullName, email, registrationType, phoneNumber, ticketCount
         })
-        res.status(201).json({ status: 201, message: '  Successfully! Registered in the Event ' })
+        res.status(201).json({ status: 201, message: '  Successfully! Registered in the Event ' , result})
     } catch (err) {
         console.log(err)
         res.status(500).json({ status: 500, error: err })
