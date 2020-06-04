@@ -5,6 +5,7 @@ const router = express.Router()
 const interest = require('../models/interested')
 const authUser = require('../middlewares/authUser')
 
+
 router.post('/', async (req, res) => {
     // console.log(req.body)
     // res.json({ status: 200, message: 'Done' })
@@ -20,7 +21,7 @@ router.post('/', async (req, res) => {
     }
 })
 
-router.get('/:id', authUser, async (req, res) => {
+router.get('/:id',authUser, async (req, res) => {
     let events
 
 
