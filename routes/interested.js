@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 
 const router = express.Router()
 const interest = require('../models/interested')
+const event = require('../models/createEvent')
 const authUser = require('../middlewares/authUser')
 
 
@@ -31,4 +32,24 @@ router.get('/:id',authUser, async (req, res) => {
     res.json({ status: 200, events })
 })
 
+
+router.get('/analysis/:id',authUser, async (req, res) => {
+    const event1= await event.findById(req.params.id)
+    let events
+
+    events = await interest.find({
+        eventId: req.params.id
+    })
+
+    let SELF = events.filter(e => e.registrationType === 'SELF').length
+    let GROUP = events.filter(e => e.registrationType === 'GROUP').length
+    let CORPORATE = events.filter(e => e.registrationType === 'CORPORATE').length
+    let OTHER = events.filter(e => e.registrationType === 'OTHER') .length
+    console.log(SELF)
+    console.log(GROUP)
+    console.log(CORPORATE)
+    console.log(OTHER)
+
+    res.json({ status: 200, SELF,GROUP,CORPORATE,OTHER })
+})
 module.exports = router
