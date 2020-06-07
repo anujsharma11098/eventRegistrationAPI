@@ -27,14 +27,7 @@ router.get('/', async (req, res) => {
     let events
     events = await event.aggregate([
 
-        {
-            $lookup: {
-                from: 'users',
-                localField: 'userId',
-                foreignField: '_id',
-                as: 'userInfo'
-            }
-        }, {
+         {
             $sort: {
                 createdAt: -1
             }
