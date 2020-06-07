@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const router = express.Router()
 const interest = require('../models/interested')
 const event = require('../models/createEvent')
-const sendmail = require('./utils/sendEmail')
+const sendmail = require('../utils/sendEmail')
 
 const authUser = require('../middlewares/authUser')
 

@@ -22,5 +22,3 @@ app.use('/', require('./routes/routes'))
 app.listen(port, () => {
     console.log(`Server Started on Port ${port}...`)
 })
-const sendmail = require('./utils/sendEmail')
-sendmail("ejekanshjain@gmail.com","Test","Hello ej-")
