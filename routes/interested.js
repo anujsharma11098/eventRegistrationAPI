@@ -33,7 +33,7 @@ router.get('/:id',authUser, async (req, res) => {
 })
 
 
-router.get('/analysis/:id',authUser, async (req, res) => {
+router.get('/analysis/:id', async (req, res) => {
     const event1= await event.findById(req.params.id)
     let events
 
