@@ -37,4 +37,18 @@ router.get('/', async (req, res) => {
     res.json({ status: 200, events })
 })
 
+router.get('/bhavit', async (req, res) => {
+    let events
+    events = await event.aggregate([
+
+         {
+            $sort: {
+                createdAt: -1
+            }
+        }
+    ])
+
+    res.json( events )
+})
+
 module.exports = router

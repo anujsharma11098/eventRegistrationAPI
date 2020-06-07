@@ -22,6 +22,11 @@ Content-Type: application/json
 
 GET http://localhost:5000/api/createEvent
 
+
+### Get all Events
+
+GET http://localhost:5000/api/createEvent/bhavit
+
 ### event registered
 
 POST http://localhost:5000/api/createEvent
