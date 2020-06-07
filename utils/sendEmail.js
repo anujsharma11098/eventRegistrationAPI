@@ -12,7 +12,7 @@ module.exports = (email, subject, body) => {
         from: `TRON <${process.env.NODEMAILER_EMAIL}>`,
         to: email,
         subject,
-        text: body
+        text: html
     }
     transporter.sendMail(mailOptions, (err, info) => {
         if (err)
