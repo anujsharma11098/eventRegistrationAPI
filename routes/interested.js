@@ -271,7 +271,7 @@ router.post('/', async (req, res) => {
         </tr>
         </tbody>
         </table>
-        <div id="qrcode"><img src="Register.png" style="width:400px;height:400px"></div>
+        <div id="qrcode"><img src="https://www.google.com/search?q=qr+code&rlz=1C1FERN_enIN715IN715&sxsrf=ALeKk00jTl41aklIZ0YMoYZQ_xbRz-4zIg:1591520873957&tbm=isch&source=iu&ictx=1&fir=JvZ-YfpghK8nWM%253A%252COVvsck_BEBqL8M%252C_&vet=1&usg=AI4_-kRLkcDQeTyjgrgWm82hUn_CU1j21g&sa=X&ved=2ahUKEwjl2-Cire_pAhVRWX0KHR7EDYYQ9QEwBXoECAsQNw#imgrc=JvZ-YfpghK8nWM:" style="width:400px;height:400px"></div>
         <table border="0" cellpadding="0" cellspacing="0" class="divider" role="presentation" style="table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign="top" width="100%">
         <tbody>
         <tr style="vertical-align: top;" valign="top">
