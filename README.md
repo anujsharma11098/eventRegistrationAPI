@@ -4,7 +4,7 @@
 <!-- PROJECT LOGO -->
 
 
-  <h3 align="center">TaskHub</h3>
+  <h3 align="center">Event Registration Website</h3>
 
   <p align="center">
     A event registration Web-App with REST API functionalities
