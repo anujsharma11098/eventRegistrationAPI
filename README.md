@@ -8,7 +8,6 @@
 
   <p align="center">
     A event registration Web-App with REST API functionalities
-
     <br />
     
 </p>
@@ -76,7 +75,7 @@ npm install npm@latest -g
 1. Get a free MongoDb_URL at [MongoDB](https://mongodb.com)
 2. Clone the repo
 ```sh
-git clone https://github.com/your_username_/Project-Name.git
+git clone https://github.com/anujsharma11098/eventRegistrationAPI.git
 ```
 3. Install NPM packages
 ```sh
